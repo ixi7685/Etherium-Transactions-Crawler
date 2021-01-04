@@ -1,4 +1,3 @@
-
 import HeaderOptions from '../components/home/HeaderOptions.js'
 import HomeCard from '../components/home/HomeCard.js'
 export default {
@@ -39,13 +38,6 @@ export default {
             return  this.$store.getters.transactions
         },
         
-        
-
-        
-
-       
-
-        
     },
 
     components: {
@@ -78,73 +70,18 @@ export default {
     },
    
     watch: {
-      /*address: function(newVal, oldVal) {
-
-
-        
-       if(newVal == oldVal) {
-       this.getTransactions()
-       }else{
-           this.getTransactions()
-       }
-      },*/
       
-         
-       /*  address: function() {
-         
-            this.getTransactions()
-        },
+        
         block: function() {
-         
-            this.getTransactions()
-        },*/
-
-      /*  combined: {
-            handler: function (val, oldVal) { 
-                
-                console.log(val)
-                console.log(oldVal)
-                this.getTransactions()
-
-             },
            
-        },
-        block: function() {
-         
             this.getTransactions()
-        },*/
-      /*  address: {
-            handler: function (val, oldVal) { 
-                
-                console.log(val)
-                console.log(oldVal)
-                this.getTransactions()
 
-             },
-            nextTick: true
-        }*/
-        
-        
-
-        block: {
-            handler: function (val, oldVal) { 
-                
-                console.log(val)
-                console.log(oldVal)
-                this.getTransactions()
-
-             },
+         
             
         },
-            address: function() {
-
-
+        address: function() {
         
-           
-                this.getTransactions()
-            }
-      
-
+            this.getTransactions()
 
         },
            
@@ -153,5 +90,7 @@ export default {
    
     
    
+}
+
 }
 

@@ -17,7 +17,6 @@ export default {
     data() {
         return {
             apiKey : 'X136HDYEAZTCN63163TCJCYE27DMAMUFAS',
-           
             eth:'',
             btc:'',
             marketCap:''
@@ -27,19 +26,18 @@ export default {
 
     methods: {
         
-            async fetch(){
+             fetch(){
                var  vm = this
-              await axios.get(
+               axios.get(
                `https://api.etherscan.io/api?module=stats&action=ethprice&apikey=${this.apiKey}`
               ).then(function(response) {
-                //vm.$store.dispatch('setLoading', true)
                 vm.eth=response.data.result.ethusd    
                 vm.btc =response.data.result.ethbtc
               }) .catch(function(error) {
                 console.log(error);
               });
 
-            await axios.get(`https://api.etherscan.io/api?module=stats&action=ethsupply&apikey=${this.apiKey}`
+               axios.get(`https://api.etherscan.io/api?module=stats&action=ethsupply&apikey=${this.apiKey}`
               ).then(function(response){
                var res =response.data.result
                var price = res.toString();

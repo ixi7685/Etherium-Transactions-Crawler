@@ -21,7 +21,7 @@ export default {
                                 <p style="font-size:13px;color:green">0xfa85acc8a56efb918efd58ac0277fde6bd2611d2</p> <br>
                                 
                                 <p style="font-size:13px;color:blue">SUGGESTED ADDRESS 2 : </p>
-                                <p style="font-size:13px;color:blue">0x2F573a409666730Ded9C02A843ABC13c2b357e00</p> 
+                                <p style="font-size:13px;color:blue">0x8944A8930b1A37301A56615aEe611CeEd7B62acE</p> 
 
                                
                                
@@ -31,14 +31,9 @@ export default {
                                     <input  v-model="address" type="text" class="form-control" minlength="14" placeholder="Address" style="width:340px;" required>
                                 </div><br><br>
                                 <p style="font-size:13px;color:green">SUGGESTED BLOCK 1: 11544030</p>
-                                
+                                <p style="font-size:13px;color:blue"> SUGGESTED BLOCK 2: 11385250</p><br><br>
 
-                                <p style="font-size:13px;color:blue"> SUGGESTED BLOCK 2: 11433637</p>
-
-
-                                
-                                
-                                <div class="form-group">
+                                 <div class="form-group">
                                     <label for="Block"> </label>
                                     <input v-model="block" type="text" class="form-control"   minlength="4" placeholder="Block"  style="width:340px;" required>
                                 </div>
@@ -93,8 +88,8 @@ export default {
 
         onSubmit() {
            
-           
-            this.$store.dispatch('setLoaded', false)
+            console.log(this.block)
+         
             this.$store.dispatch('setAddress', this.address)
             this.$store.dispatch('setBlock', this.block)
             this.closeModal()

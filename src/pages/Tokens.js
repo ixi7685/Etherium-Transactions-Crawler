@@ -35,13 +35,11 @@ export default {
     getTokens() {
 
            let vm = this;
-          
-          axios.get('https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0xdac17f958d2ee523a2206206994597c13d831ec7&apikey='+ this.apiKey)
+           axios.get('https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0xdac17f958d2ee523a2206206994597c13d831ec7&apikey='+ this.apiKey)
           .then(function(response) {
            vm.tether.name = 'TETHER' 
            vm.tether.result = response.data.result * 1e-6
            vm.totalAmounts.push(vm.tether)
-           
            })
             .catch(function(error) {
                 console.log(error);
