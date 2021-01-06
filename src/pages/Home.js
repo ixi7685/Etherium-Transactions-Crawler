@@ -17,7 +17,7 @@ export default {
         return {
            apiKey : 'X136HDYEAZTCN63163TCJCYE27DMAMUFAS',
            temp:'',
-           empty:''
+           
            
         }
     },
@@ -53,10 +53,8 @@ export default {
             axios.get(`https://api.etherscan.io/api?module=account&action=txlist&address=${this.address}&startblock=${this.block}&endblock=latest&sort=asc&apikey=`+ this.apiKey)
             .then(function(response) {
             vm.$store.dispatch('setLoaded', true)
-            var checked =response.data.result.map(item=> +item.value * 1e-18) 
             vm.temp= response.data.result.map(({value, ...rest}) => ({...rest, value: +value * 1e-18}));
             vm.$store.dispatch('setTransactions', vm.temp)
-           
             vm.$store.dispatch('setLoading', false)
             })
             .catch(function(error) {

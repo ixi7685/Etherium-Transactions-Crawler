@@ -1,7 +1,4 @@
 import Modal from './Modal.js'
-
-
-
 export default {
     name: 'addModal',
     template: /*html*/`
@@ -15,7 +12,7 @@ export default {
 
                                <p style="font-size:11px;color:red" > COPY & PASTE SUGGESTED ADDRESS 1 & SUGGESTED BLOCK 1</p><br><br><br>
                                <p style="font-size:11px;color:red" > OR SUGGESTED ADDRESS 2 & SUGGESTED BLOCK 2</p><br><br><br>
-                               <p style="font-size:11px;color:red" > OR RANDOMLY SELECT THE TRANSACTION ADDRESS</p><br><br><br>
+                               <p style="font-size:11px;color:red" > OR RANDOMLY SELECT THE TRANSACTION ADDRESS & BLOCK</p><br><br><br>
 
                                 <p style="font-size:13px;color:green">SUGGESTED ADDRESS 1: </p>
                                 <p style="font-size:13px;color:green">0xfa85acc8a56efb918efd58ac0277fde6bd2611d2</p> <br>
